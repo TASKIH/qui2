@@ -359,7 +359,7 @@ const ResultRender = ({okCount, ngCount}) => {
 
 const ShareRender = ({okCount, ngCount}) => {
   const shareUrl = "http://twitter.com/share?url=https://friendly-lamport-2b360e.netlify.app&text=2についてのクイズに" + okCount +
-      "問正解しました！ #web1week &via=tRiaeZ1&related=tRiaez1&hashtags=#web1week";
+      "問正解しました！%20%23web1week%20&via=tRiaeZ1&related=tRiaez1&hashtags=#web1week";
 
   return (
       <React.Fragment>
@@ -541,7 +541,7 @@ function App() {
                ref={ref}>
           </div>
         </div>
-        <ReactInterval timeout={1100} enabled={(!state.wait) && (!state.end)}
+        <ReactInterval timeout={1} enabled={(!state.wait) && (!state.end)}
                        callback={timer} />
       </div>
   );
