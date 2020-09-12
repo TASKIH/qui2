@@ -1,6 +1,5 @@
 import React, {useCallback, useState} from 'react';
 import ReactInterval from 'react-interval';
-import { css } from 'glamor';
 
 import './App.css';
 
@@ -327,7 +326,7 @@ const ResultRender = ({okCount, ngCount}) => {
 };
 
 const ShareRender = ({okCount, ngCount}) => {
-  const shareUrl = "http://twitter.com/share?url=[シェアするURL]&text=2についてのクイズに" + okCount + " / " + (okCount + ngCount) +
+  const shareUrl = "http://twitter.com/share?url=https://friendly-lamport-2b360e.netlify.app&text=2についてのクイズに" + okCount + " / " + (okCount + ngCount) +
       "問正解しました！&via=tRiaeZ1&related=tRiaez1&hashtags=#web1week";
 
   return (
@@ -500,7 +499,7 @@ function App() {
                ref={ref}>
           </div>
         </div>
-        <ReactInterval timeout={500} enabled={(!state.wait) && (!state.end)}
+        <ReactInterval timeout={1500} enabled={(!state.wait) && (!state.end)}
                        callback={timer} />
       </div>
   );
