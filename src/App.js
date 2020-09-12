@@ -8,6 +8,7 @@ const TYPE = {
   Select: 1,
   Result: 2,
   Share: 3,
+  Writing: 4,
 }
 const okMessage = {
   type: TYPE.Message,
@@ -17,11 +18,12 @@ const ngMessage = {
   type: TYPE.Message,
   value: "❌　はずれ！！"
 };
+const firstQuiz = {
+  type: TYPE.Message,
+  value: "2に関するクイズをどんどん出していくから"
+};
 const quiz = [
   {
-    type: TYPE.Message,
-    value: "2に関するクイズをどんどん出していくから"
-  },{
     type: TYPE.Message,
     value: "ボタンを押して答えてね。"
   },
@@ -35,7 +37,7 @@ const quiz = [
   },
   {
     type: TYPE.Select,
-    response: "一富士二鷹三茄子。江戸時代のころには流布されていたとされています。四以降は何種類か存在されていますが、四扇、五煙草、六座頭と続くものが有名です。",
+    response: "一富士二鷹三茄子。江戸時代のころには流布していたとされています。四以降は何種類か存在していますが、四扇、五煙草、六座頭と続くものが有名です。",
     value: [
       {
         text: "鷹",
@@ -53,6 +55,9 @@ const quiz = [
     ]
   },
   {
+    type: TYPE.Writing,
+  },
+  {
     type: TYPE.Message,
     value: "問題"
   },
@@ -62,7 +67,7 @@ const quiz = [
   },
   {
     type: TYPE.Select,
-    response: "QRは、Quick Responseの略で、「高速読み取り」を意図した単語です。日本のデンソーが開発し、現在はQRコード決済など世界中で広く使われています。",
+    response: "QRは、Quick Responseの略で、「高速読み取り」を意図しています。日本のデンソーが開発し、現在はQRコード決済など世界中で広く使われています。",
     value: [
       {
         text: "Quarantine Reservation",
@@ -75,9 +80,12 @@ const quiz = [
         text: "Qualify Ray"
       },
       {
-        text: "Quiz Reference"
+        text: "Quattro Rettangolo"
       }
     ]
+  },
+  {
+    type: TYPE.Writing,
   },
   {
     type: TYPE.Message,
@@ -107,16 +115,19 @@ const quiz = [
     ]
   },
   {
+    type: TYPE.Writing,
+  },
+  {
     type: TYPE.Message,
     value: "問題"
   },
   {
     type: TYPE.Message,
-    value: "世界で一番領土が広いのはロシアですが、二番目に広いのはどこでしょう？",
+    value: "現在の国連加盟国のうち、一番領土が広いのはロシアですが、二番目に広いのはどこでしょう？",
   },
   {
     type: TYPE.Select,
-    response: "カナダ、アメリカ、中国、ブラジルと続きます。",
+    response: "ロシア、カナダ、アメリカ、中国、ブラジルと続きます。",
     value: [
       {
         text: "アメリカ",
@@ -134,6 +145,9 @@ const quiz = [
     ]
   },
   {
+    type: TYPE.Writing,
+  },
+  {
     type: TYPE.Message,
     value: "問題"
   },
@@ -143,7 +157,7 @@ const quiz = [
   },
   {
     type: TYPE.Select,
-    response: "1のピッチャーを起点として、捕手、内野、外野の順に9のライトまで数字が振られます。",
+    response: "キャッチャーです。1のピッチャーを起点として、捕手、内野、外野の順に9のライトまで数字が振られます。",
     value: [
       {
         text: "サード",
@@ -161,12 +175,15 @@ const quiz = [
     ]
   },
   {
+    type: TYPE.Writing,
+  },
+  {
     type: TYPE.Message,
     value: "問題"
   },
   {
     type: TYPE.Message,
-    value: "太陽系の第二惑星は次のうちどれ？",
+    value: "ずばり、太陽系の第二惑星は？",
   },
   {
     type: TYPE.Select,
@@ -188,12 +205,15 @@ const quiz = [
     ]
   },
   {
+    type: TYPE.Writing,
+  },
+  {
     type: TYPE.Message,
     value: "問題"
   },
   {
     type: TYPE.Message,
-    value: "イギリス英語で「2nd floor」と言うとき、日本では一般的に何階のこと？",
+    value: "イギリス英語で「2nd floor」と言ったら、日本では一般的に何階のことを指す？",
   },
   {
     type: TYPE.Select,
@@ -215,12 +235,15 @@ const quiz = [
     ]
   },
   {
+    type: TYPE.Writing,
+  },
+  {
     type: TYPE.Message,
     value: "問題"
   },
   {
     type: TYPE.Message,
-    value: "中国の歴史で、一番最初に皇帝に即位したのは始皇帝ですが、二番目に即位した皇帝は誰？",
+    value: "中国史上で、一番最初に皇帝に即位したのは始皇帝ですが、二番目に即位したのは誰？",
   },
   {
     type: TYPE.Select,
@@ -242,16 +265,19 @@ const quiz = [
     ]
   },
   {
+    type: TYPE.Writing,
+  },
+  {
     type: TYPE.Message,
     value: "問題"
   },
   {
     type: TYPE.Message,
-    value: "ツーブロックってどういう髪型？",
+    value: "ツーブロックってどんな髪型？",
   },
   {
     type: TYPE.Select,
-    response: "髪の長さに差をつけて段差ができるような髪型です。日本では1980年代と2010年代に流行しました。",
+    response: "トップとサイドで髪の長さを変えて、意識的に段差をつくるような髪型です。日本では1980年代と2010年代に流行しました。",
     value: [
       {
         text: "髪の束を棘のように立てる髪型",
@@ -269,12 +295,15 @@ const quiz = [
     ]
   },
   {
+    type: TYPE.Writing,
+  },
+  {
     type: TYPE.Message,
     value: "問題"
   },
   {
     type: TYPE.Message,
-    value: "東海道五十三次、日本橋を起点として、一番目は品川宿ですが二番目は？",
+    value: "東海道五十三次において日本橋を起点としたとき、一番目は品川宿ですが、二番目は？",
   },
   {
     type: TYPE.Select,
@@ -304,6 +333,9 @@ const quiz = [
     value: "あなたの成績は……",
   },
   {
+    type: TYPE.Writing,
+  },
+  {
     type: TYPE.Result,
   },
   {
@@ -326,7 +358,7 @@ const ResultRender = ({okCount, ngCount}) => {
 };
 
 const ShareRender = ({okCount, ngCount}) => {
-  const shareUrl = "http://twitter.com/share?url=https://friendly-lamport-2b360e.netlify.app&text=2についてのクイズに" + okCount + " / " + (okCount + ngCount) +
+  const shareUrl = "http://twitter.com/share?url=https://friendly-lamport-2b360e.netlify.app&text=2についてのクイズに" + okCount +
       "問正解しました！&via=tRiaeZ1&related=tRiaez1&hashtags=#web1week";
 
   return (
@@ -354,7 +386,17 @@ const MessageRender = ({object}) => {
       </React.Fragment>
   )
 };
-
+const WritingRender = () => {
+  return (
+      <React.Fragment>
+        <div className="line__left">
+          <div className="line__left-text">
+            <div className="text">...</div>
+          </div>
+        </div>
+      </React.Fragment>
+  );
+};
 const SelectRender = ({object, onOK, onNG}) => {
   const [state, setState] = useState({
     selected: false,
@@ -371,7 +413,7 @@ const SelectRender = ({object, onOK, onNG}) => {
     } else {
       onNG(object.response);
     }
-  }, [onNG, onOK, state]);
+  }, [object.response, onNG, onOK, state]);
   return (
       <React.Fragment>
         <div className="line__right">
@@ -389,7 +431,7 @@ const SelectRender = ({object, onOK, onNG}) => {
             )}
         </div>
       </React.Fragment>
-  )
+  );
 };
 
 
@@ -399,19 +441,18 @@ function App() {
     wait: false,
     okCount: 0,
     ngCount: 0,
-    currentText: [quiz[0]],
+    currentText: [firstQuiz],
+    prevElement: null,
     end: false
   });
   const onOK = useCallback((response) => {
-    const newText = state.currentText;
-    newText.push(okMessage);
-    newText.push({
+    quiz.unshift({
       type: TYPE.Message,
       value: response,
     });
+    quiz.unshift(okMessage);
     setState({
       ...state,
-      currentText: newText,
       okCount: (state.okCount+1),
       wait: false,
     });
@@ -419,15 +460,13 @@ function App() {
 
 
   const onNG = useCallback((response) => {
-    const newText = state.currentText;
-    newText.push(ngMessage);
-    newText.push({
+    quiz.unshift({
       type: TYPE.Message,
       value: response,
     });
+    quiz.unshift(ngMessage);
     setState({
       ...state,
-      currentText: newText,
       ngCount: (state.ngCount+1),
       wait: false,
     });
@@ -448,27 +487,26 @@ function App() {
     if (state.wait || state.end) {
       return;
     }
-    if (state.index >= quiz.length) {
+    if (quiz.length === 0) {
       setState({
         ...state,
         end: true
       });
       return;
     }
-    const newElement = quiz[state.index];
-
+    const newElement = quiz.shift();
     const newText = state.currentText;
-    if (newElement.type === TYPE.Message) {
-      newText.push(newElement);
-    } else {
-      newText.push(newElement);
+    if (state.prevElement && state.prevElement.type === TYPE.Writing) {
+      newText.pop();
     }
+    newText.push(newElement);
 
     const newIndex = state.index + 1;
     setState({
       ...state,
       index: newIndex,
       currentText: newText,
+      prevElement: newElement,
       wait: (newElement.type === TYPE.Select)
     });
     scrollToBottomOfList();
@@ -493,13 +531,17 @@ function App() {
               return (<ResultRender okCount={state.okCount} ngCount={state.ngCount}/>);
             } else if(v.type === TYPE.Share){
               return (<ShareRender okCount={state.okCount} ngCount={state.ngCount}/>);
+            } else if (v.type === TYPE.Writing) {
+              return (<WritingRender key={idx}/>);
+            } else {
+              return (<React.Fragment></React.Fragment>);
             }
           })}
           <div style={{ float:"left", clear: "both" }}
                ref={ref}>
           </div>
         </div>
-        <ReactInterval timeout={1500} enabled={(!state.wait) && (!state.end)}
+        <ReactInterval timeout={1100} enabled={(!state.wait) && (!state.end)}
                        callback={timer} />
       </div>
   );
