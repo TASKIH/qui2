@@ -44,10 +44,6 @@ code {
   overflow-y: scroll;
 }
 
-/* 4 スタンプ画像最大幅 */
-.line__container .stamp img {
-  max-width:120px;
-}
 
 /* 5 相手の会話 */
 .line__container .line__left {
@@ -59,23 +55,6 @@ code {
   clear: both;
 }
 
-/* 6 アイコン画像 */
-.line__container .line__left figure {
-  width: 50px;
-  position: absolute;
-  top: 15px;
-  left: 0;
-  padding: 0;
-  margin: 0;
-
-}
-
-/* 7 正方形を用意 */
-.line__container .line__left figure img{
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
 
 .line__container .line__left .line__left-text {
   margin-left: 10px;      /* 70px */
@@ -94,7 +73,7 @@ code {
   border-radius: 20px;
   background-color: #EDF1EE;  /* 吹き出し背景色 相手 */
   color: #000000;   /* トーク文字色 相手 */
-  font-size: 11px;  /* トーク文字サイズ 相手 */
+  font-size: 14px;  /* トーク文字サイズ 相手 */
 }
 
 /* 11 吹き出し */
@@ -131,7 +110,7 @@ code {
   margin-left: 80px;
   background-color: #8de055;  /* 吹き出し背景色 自分 */
   color: #000000;   /* トーク文字色 自分 */
-  font-size: 11px;  /* トーク文字サイズ 自分 */
+  font-size: 14px;  /* トーク文字サイズ 自分 */
 }
 
 /* 14 吹き出し */
@@ -149,41 +128,8 @@ code {
   transform: rotate(-35deg); -webkit-transform: rotate(-35deg);
 }
 
-/* 15 自分がスタンプを送る時 */
-.line__container .line__right .stamp {
-  position: relative;
-  margin-left: 80px;
-}
-
-/* 16 時間エリア 相手
-.line__container .line__left .time {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  width: 0px;
-  text-align: left;
-  right: 0px;
-  bottom: 0px;
-  font-size: 80%;
-  color: #ffffff;
-}
-*/
-
-/* 17 既読／時間エリア 自分 */
-.line__container .line__right .date {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100px;
-  text-align: right;
-  left: -25px;
-  bottom: 0px;
-  font-size: 80%;
-  color: #ffffff;
-}
-
 .select {
-  width: 19em;
+  width: 14em;
   display: inline-block;
   padding: 0.5em 1em;
   text-decoration: none;
