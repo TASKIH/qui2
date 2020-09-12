@@ -359,7 +359,7 @@ const ResultRender = ({okCount, ngCount}) => {
 
 const ShareRender = ({okCount, ngCount}) => {
   const shareUrl = "http://twitter.com/share?url=https://friendly-lamport-2b360e.netlify.app&text=2についてのクイズに" + okCount +
-      "問正解しました！&via=tRiaeZ1&related=tRiaez1&hashtags=#web1week";
+      "問正解しました！ #web1week &via=tRiaeZ1&related=tRiaez1&hashtags=#web1week";
 
   return (
       <React.Fragment>
