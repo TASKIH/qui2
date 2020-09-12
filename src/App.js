@@ -1,13 +1,9 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import ReactInterval from 'react-interval';
 import { css } from 'glamor';
 
 import './App.css';
 
-const ROOT_CSS = css({
-  height: "500px",
-  overflowY: "scroll",
-});
 const TYPE = {
   Message: 0,
   Select: 1,
