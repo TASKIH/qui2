@@ -33,7 +33,7 @@ const quiz = [
   },
   {
     type: TYPE.Message,
-    value: "初夢についてのことわざ。一は富士、二(1)、三茄子。(1)に入るのはなに？",
+    value: "初夢についてのことわざ。一富士二(1)三茄子。(1)に入るのはなに？",
   },
   {
     type: TYPE.Select,
