@@ -517,11 +517,11 @@ function App() {
   }, [scrollToBottomOfList]);
 
   return (
-      <div class="line__container">
-        <div class="line__title">
+      <div className="line__container">
+        <div className="line__title">
           Qui2
         </div>
-        <div class="line__container scroll">
+        <div className="line__container scroll">
           {state.currentText.map((v, idx) => {
             if (v.type === TYPE.Message) {
               return (<MessageRender key={idx} object={v}/>);
