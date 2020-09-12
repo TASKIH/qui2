@@ -541,7 +541,7 @@ function App() {
                ref={ref}>
           </div>
         </div>
-        <ReactInterval timeout={1} enabled={(!state.wait) && (!state.end)}
+        <ReactInterval timeout={1100} enabled={(!state.wait) && (!state.end)}
                        callback={timer} />
       </div>
   );
